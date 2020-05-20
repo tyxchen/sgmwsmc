@@ -665,7 +665,7 @@ public class GraphMatchingState<F, NodeType extends GraphNode<?>> implements Gen
 			{
 				if (nodeToEdge.containsKey(node))
 					throw new RuntimeException("Matching violation! There is a bug in the matching sampler.");
-				
+
 				nodeToEdge.put(node, edge);
 			}
 		}

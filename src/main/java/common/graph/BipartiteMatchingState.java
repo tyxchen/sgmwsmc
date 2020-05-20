@@ -2,6 +2,7 @@ package common.graph;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
@@ -20,6 +21,7 @@ public class BipartiteMatchingState<F, NodeType extends GraphNode<?>> extends Gr
 		initial.visitedNodes = new ArrayList<>();
 		//initial.matching = new ArrayList<>();
 		initial.matching = new HashSet<>();
+		initial.nodeToMatching = new HashMap<>();
 		initial.coveredNodes = new HashSet<>();
 		initial.decisions = new ArrayList<>();
 		return initial;
@@ -51,6 +53,7 @@ public class BipartiteMatchingState<F, NodeType extends GraphNode<?>> extends Gr
 		BipartiteMatchingState<F, NodeType> copyState = new BipartiteMatchingState<>();
 		//copyState.matching = new ArrayList<>(this.matching);
 		copyState.matching = new HashSet<>(this.matching);
+		copyState.nodeToMatching = new HashMap<>(this.nodeToMatching);
 		copyState.coveredNodes = new HashSet<>(this.coveredNodes);
 		//copyState.visitedNodes = new HashSet<>(this.visitedNodes);
 		copyState.visitedNodes = new ArrayList<>(this.visitedNodes);
