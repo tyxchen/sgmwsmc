@@ -86,7 +86,7 @@ public class MonteCarloLikelihoodComputation
 		System.out.println("Parallel computation: " + (end - start)/1000.0 + " seconds.");
 		System.out.println("logLik4: " + logLik4/numSamples);
 		double diff = Math.abs(logLik3/n -logLik4/numSamples);
-		//System.out.println(diff);
+		System.out.println("Diff: " + diff);
 		Assert.assertTrue(NumericalUtils.isClose(diff, 0.0, 1e-2));
 
 		start = System.currentTimeMillis();

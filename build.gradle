@@ -3,9 +3,12 @@ apply plugin: 'maven'
 apply plugin: 'eclipse'
 apply plugin: 'application'
 
-//mainClassName = "image.experiments.LinearFeatureExperiment"
-//mainClassName = "image.experiments.EdgeFeatureExperiment"
-mainClassName = "knot.experiments.simulation.PerformanceExperiments"
+application {
+    //mainClassName = "image.experiments.LinearFeatureExperiment"
+    //mainClassName = "image.experiments.EdgeFeatureExperiment"
+    //mainClassName = "knot.experiments.simulation.PerformanceExperiments"
+    mainClassName = "knot.experiments.simulation.SegmentedExperimentsSimulatedData"
+}
 
 eclipse { 
   classpath {

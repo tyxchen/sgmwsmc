@@ -52,24 +52,24 @@ public class MatchingSampleEvaluation<F, NodeType extends GraphNode<?>>
 		MatchingSampleEvaluation<F, NodeType> eval = new MatchingSampleEvaluation<>();
 
 		double sum = 0.0;
-		int bestAccuracy = 0;
+		int bestAccuracy = Integer.MIN_VALUE;
 		double bestLogLik = Double.NEGATIVE_INFINITY;
 		for (GenericGraphMatchingState<F, NodeType> sample : samples)
 		{
 			int accuracy = computeAccuracy(sample, truth);
 			sum += accuracy;
 
-				if (accuracy > bestAccuracy)
-				{
-					bestAccuracy = accuracy;
-					eval.bestAccuracyMatching = Pair.create(sample, bestAccuracy);
-					if (verbose) {
-		  				System.out.println("new best accuracy: " + accuracy + "\n logDensity@new best: " + sample.getLogDensity());
-		  				System.out.println(sample.toString());
-					}
+			if (accuracy > bestAccuracy)
+			{
+				bestAccuracy = accuracy;
+				eval.bestAccuracyMatching = Pair.create(sample, bestAccuracy);
+				if (verbose) {
+					System.out.println("new best accuracy: " + accuracy + "\n logDensity@new best: " + sample.getLogDensity());
+					System.out.println(sample.toString());
 				}
-				if (sample.getLogDensity() > bestLogLik) 
-				{
+			}
+			if (sample.getLogDensity() > bestLogLik)
+			{
 					eval.bestLogLik = sample.getLogDensity();
 					eval.bestLogLikMatching = Pair.create(sample, Pair.create(bestLogLik, accuracy));
 					if (verbose) {
