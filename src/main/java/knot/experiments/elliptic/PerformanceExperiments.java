@@ -29,7 +29,7 @@ public class PerformanceExperiments implements Runnable
 	@Option public static boolean sequentialMatching = true;
 	public static int [] lumbers = {2,3,4,5,7,8,9,13,14,15,16};
 
-	public static String dataDirectory = "/Users/sjun/Desktop/scans/21Oct2015/";
+	public static String dataDirectory = "data/21Oct2015/";
 	public static String outputPath = "output/knot-matching/";
 
 	@Override
