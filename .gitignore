@@ -4,3 +4,9 @@
 results/
 ranking/
 /build/
+
+.idea/
+gradle/
+output/
+gradlew
+gradlew.bat
