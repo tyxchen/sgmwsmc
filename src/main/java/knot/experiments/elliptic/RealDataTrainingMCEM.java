@@ -33,14 +33,14 @@ import briefj.run.Results;
 
 public class RealDataTrainingMCEM implements Runnable 
 {
-	@Option(required=true) public static boolean useSPF = true;
-	@Option(required=true) public static int targetESS = 100;
-	@Option(required=true) public static int numConcreteParticles = 100;
-	@Option(required=true) public static int maxImplicitParticles = 1_000;
-	@Option(required=true) public static double lambda = 10.0;
-	@Option(required=true) public static int maxEMIter = 50;
-	@Option(required=true) public static boolean parallelize = true;
-	@Option(required=true) public static int maxLBFGSIter = 100;
+	@Option(required=false) public static boolean useSPF = true;
+	@Option(required=false) public static int targetESS = 100;
+	@Option(required=false) public static int numConcreteParticles = 100;
+	@Option(required=false) public static int maxImplicitParticles = 1_000;
+	@Option(required=false) public static double lambda = 10.0;
+	@Option(required=false) public static int maxEMIter = 50;
+	@Option(required=false) public static boolean parallelize = true;
+	@Option(required=false) public static int maxLBFGSIter = 100;
 	@Option(required=false) Random random = new Random(123);
 
 	@Option(required=false) public static double tol = 1e-10;

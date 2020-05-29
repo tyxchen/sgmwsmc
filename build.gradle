@@ -6,7 +6,7 @@ apply plugin: 'application'
 application {
     //mainClassName = "image.experiments.LinearFeatureExperiment"
     //mainClassName = "image.experiments.EdgeFeatureExperiment"
-    mainClassName = "knot.experiments.elliptic.PerformanceExperiments"
+    mainClassName = "knot.experiments.elliptic.RealDataTrainingMCEM"
 }
 
 eclipse { 
